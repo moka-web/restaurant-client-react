@@ -1,0 +1,25 @@
+.counter-container{
+    margin-top: 10%;
+    display: flex;
+    justify-content: center;
+}
+
+
+.addToOrderButton{
+    border-radius: 16px;
+    background-color:#ff5733 ;
+    color: #ffff;
+    height: 5vh;
+    width: 33%;
+    border: none;
+    margin-left: 33%;
+    
+}
+
+
+.counter-btn{
+    background-color: #FFC300;
+    color: #050000;
+    margin: 0.5% 2% 2% 2%;
+    border: none;
+}
