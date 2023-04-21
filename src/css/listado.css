@@ -8,7 +8,7 @@
 
 .cardList{
     width: 95%;
-    height: 8vh;
+    height: 9vh;
     display: flex;
     flex-direction: row;
     max-width: 100%;
@@ -33,14 +33,13 @@ border-radius: 100%;
 }
 
 .pCard{
-    font-size: 100% !important;
+    font-size: 2vh !important;
 }
 
 .priceCard{
-    display: flex;
-    
-    
+    display: flex;   
 }
+
 .buttonCartegoryContainer{
     width: 25%;
 }

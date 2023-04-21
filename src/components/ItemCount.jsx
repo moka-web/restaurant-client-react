@@ -30,7 +30,7 @@ export const ItemCount = ({onAdd})=>{
                 <button className="counter-btn" onClick={()=>{incrementar()}}>+</button>
             </div>
            
-            {counter > 0 && <button  className=" addToOrderButton"  onClick={()=>onAdd(counter)} variant="secondary"> <Typography>Agregar a tu pedido</Typography> </button> }
+            {counter > 0 && <button  className=" addToOrderButton"  onClick={()=>onAdd(counter)} variant="secondary"> <Typography className="addToOrderButton-text" >Agregar a tu pedido</Typography> </button> }
         </div>
     )
 }
