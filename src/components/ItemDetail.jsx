@@ -6,7 +6,8 @@ import { useSelector,useDispatch } from "react-redux";
 import { addToOrder } from "../redux/reducers/order/orderSlice";
 import { ItemCount } from "./ItemCount";
 import "../css/detail.css"
-
+import { NavLink } from "react-router-dom";
+import flecha from "../assets/Flecha.png"
 
 
 export const ItemDetail = ({nombre_producto,id,descripcion,precio})=>{
@@ -30,7 +31,7 @@ export const ItemDetail = ({nombre_producto,id,descripcion,precio})=>{
         return(
             <>  
                 <Container className="detail-box"  maxWidth="md">
-                    <div className="redDiv"><button>flecha para atras</button></div>
+                    <div className="redDiv"><NavLink to={"/"}> <img className="arrow-back" src={flecha} alt="imagen-flecha" /></NavLink></div>
                     <img className="detail_img" src="https://elsol-compress-release.s3-accelerate.amazonaws.com/images/large/1614296501390milanesa%20con%20huevos.jpg" alt="" />      
                     <h1 style={{color:"white"}}>{nombre_producto} </h1>
                     <span style={{color:"white"}}>{descripcion}</span>

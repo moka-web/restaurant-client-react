@@ -36,3 +36,9 @@
     position: relative;
     bottom: 10vh;
 }
+
+.arrow-back{
+    width: 10%;
+    margin-left: 2%;
+    margin-top: 2%;
+}
