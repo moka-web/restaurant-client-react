@@ -49,7 +49,7 @@ export const ItemList = () => {
             style={{ backgroundImage: `url(${iconoEntrada})` }}
           ></button>
 
-          <span style={{ color: "#ffff", textAlign: "center" }}>entrada</span>
+          <h5 style={{ color: "#ffff", textAlign: "center", margin:"0 auto"  }}>Entrada</h5>
         </div>
         <div className="buttonCartegoryContainer">
           <button
@@ -59,7 +59,7 @@ export const ItemList = () => {
             className="buttonCartegory"
             style={{ backgroundImage: `url(${iconoPrincipal})` }}
           ></button>
-          <span style={{ color: "#ffff", textAlign: "center" }}> principal</span>
+          <h5 style={{ color: "#ffff", textAlign: "center", margin:"0 auto"  }}> Principal</h5>
         </div>
         <div className="buttonCartegoryContainer">
           <button
@@ -69,7 +69,7 @@ export const ItemList = () => {
             className="buttonCartegory"
             style={{ backgroundImage: `url(${iconoPostre})` }}
           ></button>
-          <span style={{ color: "#ffff", textAlign: "center" }}>postre</span>
+          <h5 style={{ color: "#ffff", textAlign: "center", margin:"0 auto"  }}>Postre</h5>
         </div>
         <div className="buttonCartegoryContainer">
           <button
@@ -79,7 +79,7 @@ export const ItemList = () => {
             className="buttonCartegory"
             style={{ backgroundImage: `url(${iconoBebida})` }}
           ></button>
-          <span style={{ color: "#ffff", textAlign: "center" }}>bebida</span>
+          <h5 style={{ color: "#ffff", textAlign: "center", margin:"0 auto"  }}>Bebida</h5>
         </div>
       </Box>
       <Box className="list-scroll">
