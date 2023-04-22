@@ -1,12 +1,57 @@
 
 import { Container,Box } from '@mui/system';
-import React from 'react';
+import React, { useState } from 'react';
 import Carousel from 'react-material-ui-carousel'
 import { CarouselItem } from './CarouselItem';
 import "../css/carousel.css"
 import mozoimg from "../assets/Mozo.png"
+import { NavLink } from 'react-router-dom';
+import { Button } from '@mui/material';
+import Swal from 'sweetalert2';
 
 export const HomeCarousel = (props)=>{
+
+    const [tableNum , setTableNum] = useState()
+
+    
+
+    const mozoCall = async ()=>{
+
+
+        if (!tableNum  ) {
+
+            const { value: number } = await Swal.fire({
+                title: 'Input numero de mesa',
+                input: 'select',
+                inputOptions: {
+                  'mesas': {
+                    1: 1,
+                    2: 2,
+                    3: 3,
+                    4: 4
+                  }
+                },
+                inputLabel: 'numero de mesa',
+                inputPlaceholder: 'ingrese su numero de mesa'
+              })
+              if (number) {
+                setTableNum(number);
+
+                fetch(`https://rafalopez.000webhostapp.com/api/V1/MESA/MOZO/${number}`)
+                .then(response => response.json())
+                .then(data => console.log(data))
+                .catch(error => console.error(error))
+                
+              }
+        }else{
+            console.log(tableNum)
+            fetch(`https://rafalopez.000webhostapp.com/api/V1/MESA/MOZO/${tableNum}`)
+            .then(response => response.json())
+            .then(data => console.log(data))
+            .catch(error => console.error(error))
+        }
+       
+    }
 
 
     var items = [
@@ -26,12 +71,13 @@ export const HomeCarousel = (props)=>{
     return (
         <Box className="carouselContainer">
 
-            <Box className="mozoCall">
+            <button onClick={()=>{mozoCall()}} className="mozoCall">
+
                 <h5>¿alguna duda?</h5>
                 <h1>llamar mozo</h1>
                 <img className='mozo-img'   src={mozoimg} alt="" />
                 
-            </Box>
+            </button>
         
             <Carousel>
                 {
